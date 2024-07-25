@@ -1,0 +1,9 @@
+# ch5 1:Unit test
+## what is a unit test?
+it's code that test your code ex: 
+def add(x, y):
+	return x + y
+
+assert add(10, 10) = 10, "the condition is false"
+
+
