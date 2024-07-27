@@ -1,27 +1,24 @@
 def filter_messages(messages):
-    f_messages = []
-    count_f = []
-    #
+    filtered_msgs = []
+    dang_total = []
+
     for message in messages:
-        words = message.split()
-        i = 0
-        f_words = []
-        for word in words:
+        dang_counter = 0
+        filtered_words = []
+        for word in message.split():
             if word == "dang":
-                i += 1
-                word = ''
+                dang_counter += 1
             else:
-                f_words.append(word)
+                filtered_words.append(word)
 
-        f_words = " ".join(f_words)
-        count_f.append(i)
-        f_messages.append(f_words)
+        dang_total.append(dang_counter)
+        filtered_msgs.append(" ".join(filtered_words))
 
-    # print(count_f)
-    # print("f_words: ", f_words)
-    # print("f_messages: ", f_messages)
+    # print(dang_total)
+    # print("filtered_words: ", filtered_words)
+    # print("filtered_msgs: ", filtered_msgs)
 
-    return f_messages, count_f
+    return filtered_msgs, dang_total
 
 
 # filter_messages(
